@@ -65,8 +65,10 @@ function iniciarJogo(){
 
     if(snakeX != food.x || snakeY != food.y){
         snake.pop(); 
-    }else {food.x = Math.floor(Math.random() * 15 + 1) * box,
-           food.y = Math.floor(Math.random() * 15 + 1) * box
+    }else {food.x = Math.floor(Math.random() * 15 + 1) * box;
+           food.y = Math.floor(Math.random() * 15 + 1) * box;
+           document.getElementById("pontos").innerHTML = "Pontos: " + snake.length;
+
     }
   
     let newHead = {
